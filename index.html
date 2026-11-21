@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خبرینو | سایت خبری</title>
+    <link rel="shortcut icon" href="img/7fa180a9-9b30-492e-a9a8-ea6b69dcfb41 (1).png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-right">
+          <span id="todayDate"></span>
+          <span class="breaking-label">خبر فوری</span>
+          <div class="breaking-wrapper">
+            <div class="breaking-text" id="breakingText">در حال دریافت آخرین خبرها...</div>
+          </div>
+        </div>
+
+        <div class="top-left">
+        <a href="ads.html">تبلیغات</a>
+         <a href="contact.html">تماس با ما</a>
+          <a href="contact.html">درباره ما</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="container header-inner">
+        <button class="menu-btn" id="menuBtn" type="button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <a href="#" class="logo">
+          <span class="logo-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </span>
+          <span class="logo-text">
+            خبرینو
+            <small>پایگاه خبری آنلاین</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav">
+          <a href="index.html" class="active">صفحه اصلی</a>
+          <a href="#h2-1">سیاسی</a>
+          <a href="#h2-1">اقتصادی</a>
+          <a href="#h2-1">ورزشی</a>
+          <a href="#h2-1">فناوری</a>
+          <a href="#h2-1">فرهنگی</a>
+          <a href="#h2-1">بین‌الملل</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" id="searchBtn" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <button class="icon-btn" id="themeBtn" type="button">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <button class="login-btn" type="button">
+            <i class="fa-solid fa-user"></i>
+           <a href="ads.html" class="login-text">ورود</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <a href="#" class="logo">
+          <span class="logo-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </span>
+          <span class="logo-text">
+            خبرینو
+            <small>منوی سایت</small>
+          </span>
+        </a>
+
+        <button class="close-menu" id="closeMenu" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="mobile-nav">
+        <a href="index.html" class="active"><i class="fa-solid fa-house"></i> صفحه اصلی</a>
+        <a href="#h2-1"><i class="fa-solid fa-landmark"></i> سیاسی</a>
+        <a href="#h2-1"><i class="fa-solid fa-chart-line"></i> اقتصادی</a>
+        <a href="#h2-1"><i class="fa-solid fa-football"></i> ورزشی</a>
+        <a href="#h2-1"><i class="fa-solid fa-microchip"></i> فناوری</a>
+        <a href="#h2-1"><i class="fa-solid fa-masks-theater"></i> فرهنگی</a>
+        <a href="#h2-1"><i class="fa-solid fa-globe"></i> بین‌الملل</a>
+      </nav>
+
+      <div class="mobile-extra">
+      <a href="ads.html" class="mobile-login">
+  <i class="fa-solid fa-user"></i>
+  ورود به حساب کاربری
+</a>
+
+      </div>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="search-modal" id="searchModal">
+      <div class="search-box">
+        <button class="close-search" id="closeSearch" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2>جستجو در خبرها</h2>
+        <p>موضوع، عنوان یا کلمه کلیدی خبر موردنظر خود را وارد کنید.</p>
+
+        <form id="searchForm">
+          <input type="text" id="searchInput" placeholder="مثلاً: هوش مصنوعی، فوتبال، اقتصاد...">
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            جستجو
+          </button>
+        </form>
+
+        <div class="search-tags">
+          <span>پربازدیدها:</span>
+          <button type="button">فناوری</button>
+          <button type="button">بورس</button>
+          <button type="button">فوتبال</button>
+          <button type="button">سیاسی</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-news">
+      <div class="container">
+        <div class="hero-grid">
+          <article class="featured-news">
+            <div class="featured-bg">
+              <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1400&q=80" alt="خبر ویژه">
+              <div class="featured-overlay"></div>
+            </div>
+
+            <div class="featured-content">
+              <div class="news-meta">
+                <span class="category-badge">خبر ویژه</span>
+                <span><i class="fa-regular fa-clock"></i> ۲۰ دقیقه قبل</span>
+              </div>
+
+              <h1>تحولات تازه در دنیای فناوری؛ رقابت شرکت‌های بزرگ وارد مرحله جدید شد</h1>
+
+              <p>
+                گزارش‌های تازه نشان می‌دهد موج جدیدی از نوآوری‌های دیجیتال، مسیر آینده رسانه‌ها، اقتصاد و سبک زندگی کاربران را تغییر خواهد داد.
+              </p>
+
+              <div class="featured-actions">
+             <a href="#" class="read-more-btn open-news-modal"
+   data-title="تحولات تازه در دنیای فناوری؛ رقابت شرکت‌های بزرگ وارد مرحله جدید شد"
+   data-category="خبر ویژه"
+   data-date="۲۰ دقیقه قبل"
+   data-image="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1400&q=80"
+   data-text="گزارش‌های تازه نشان می‌دهد موج جدیدی از نوآوری‌های دیجیتال، مسیر آینده رسانه‌ها، اقتصاد و سبک زندگی کاربران را تغییر خواهد داد. شرکت‌های بزرگ فناوری با تمرکز بر هوش مصنوعی، پردازش ابری، ابزارهای هوشمند و سرویس‌های دیجیتال وارد مرحله‌ای تازه از رقابت شده‌اند. این تغییرات می‌تواند روی بازار کار، نحوه تولید محتوا، خدمات آنلاین و حتی شیوه ارتباط کاربران با رسانه‌ها تأثیر مستقیم بگذارد. کارشناسان معتقدند رسانه‌های مدرن باید خود را با این تغییرات هماهنگ کنند تا بتوانند نیاز کاربران را سریع‌تر و دقیق‌تر پاسخ دهند.">
+  مطالعه خبر
+  <i class="fa-solid fa-arrow-left"></i>
+</a>
+
+
+                <button class="save-news-btn" id="saveFeatured" type="button">
+                  <i class="fa-regular fa-bookmark"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <div class="side-news">
+            <article class="side-card">
+              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="اقتصاد">
+              <div>
+                <span>اقتصادی</span>
+                <h3>بازارهای مالی امروز با تغییرات قابل توجهی همراه شدند</h3>
+                <small><i class="fa-regular fa-clock"></i> ۱ ساعت قبل</small>
+              </div>
+            </article>
+
+            <article class="side-card">
+              <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80" alt="ورزش">
+              <div>
+                <span>ورزشی</span>
+                <h3>برنامه مسابقات هفته آینده لیگ اعلام شد</h3>
+                <small><i class="fa-regular fa-clock"></i> ۲ ساعت قبل</small>
+              </div>
+            </article>
+
+            <article class="side-card">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="فناوری">
+              <div>
+                <span>فناوری</span>
+                <h3>هوش مصنوعی نقش پررنگ‌تری در رسانه‌های آنلاین پیدا کرد</h3>
+                <small><i class="fa-regular fa-clock"></i> ۳ ساعت قبل</small>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="news-control-panel">
+          <div class="section-title">
+            <span></span>
+            <h2 id="h2-1">خبرهای مهم امروز</h2>
+          </div>
+
+          <div class="hero-tabs">
+            <button class="hero-tab active" data-category="all" type="button">همه</button>
+            <button class="hero-tab" data-category="politics" type="button">سیاسی</button>
+            <button class="hero-tab" data-category="economy" type="button">اقتصادی</button>
+            <button class="hero-tab" data-category="sport" type="button">ورزشی</button>
+            <button class="hero-tab" data-category="tech" type="button">فناوری</button>
+          </div>
+        </div>
+
+        <div class="important-news-wrapper">
+          <button class="slider-btn slider-prev" id="importantPrev" type="button">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <div class="important-news" id="importantNews"></div>
+
+          <button class="slider-btn slider-next" id="importantNext" type="button">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+
+        <div class="hero-stats row g-3">
+          <div class="col-6 col-lg-3">
+            <div class="stat-box">
+              <strong data-count="128">0</strong>
+              <span>خبر منتشر شده</span>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="stat-box">
+              <strong data-count="42">0</strong>
+              <span>خبر فوری</span>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="stat-box">
+              <strong data-count="18">0</strong>
+              <span>دسته‌بندی فعال</span>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="stat-box">
+              <strong data-count="560">0</strong>
+              <span>هزار بازدید</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-results-section" id="searchResultsSection">
+          <div class="search-results-head">
+            <div class="section-title">
+              <span></span>
+              <h2>نتایج جستجو</h2>
+            </div>
+
+            <button class="clear-search-results" id="clearSearchResults" type="button">
+              پاک کردن نتایج
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+
+          <div class="search-info" id="searchInfo"></div>
+
+          <div class="search-results-grid" id="searchResultsGrid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="breaking-analysis-section">
+  <div class="container">
+    <div class="breaking-news-bar">
+      <div class="breaking-label">
+        <i class="fa-solid fa-bolt"></i>
+        خبر فوری
+      </div>
+
+      <div class="breaking-content">
+        <div class="breaking-track" id="breakingTrack">
+          <span>افزایش توجه کاربران به رسانه‌های آنلاین در سال جدید</span>
+          <span>گزارش ویژه خبرینو از تازه‌ترین اتفاقات تکنولوژی</span>
+          <span>تحلیل بازارهای جهانی و اثر آن بر اقتصاد داخلی</span>
+          <span>تغییرات جدید در سبک مصرف خبر توسط کاربران موبایل</span>
+        </div>
+      </div>
+
+      <a href="#" class="breaking-more">
+        مشاهده بیشتر
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+
+    <div class="section-title analysis-title">
+      <span></span>
+      <h2>تحلیل منتخب روز</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <article class="main-analysis-card">
+          <div class="main-analysis-image">
+            <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1100&q=80" alt="تحلیل منتخب روز">
+            <span>تحلیل ویژه</span>
+          </div>
+
+          <div class="main-analysis-content">
+            <div class="news-meta">
+              <span>
+                <i class="fa-solid fa-calendar-days"></i>
+                امروز
+              </span>
+              <span>
+                <i class="fa-solid fa-clock"></i>
+                ۷ دقیقه مطالعه
+              </span>
+            </div>
+
+            <h3>چرا رسانه‌های دیجیتال به مرکز اصلی اعتماد کاربران تبدیل شده‌اند؟</h3>
+
+            <p>
+              با رشد شبکه‌های اجتماعی و تغییر رفتار مخاطبان، رسانه‌های آنلاین نقش مهم‌تری در اطلاع‌رسانی سریع، تحلیل دقیق و ایجاد اعتماد عمومی پیدا کرده‌اند.
+            </p>
+
+         <a href="#" class="analysis-read-more open-news-modal"
+   data-title="چرا رسانه‌های دیجیتال به مرکز اصلی اعتماد کاربران تبدیل شده‌اند؟"
+   data-category="تحلیل ویژه"
+   data-date="امروز"
+   data-image="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1100&q=80"
+   data-text="با رشد شبکه‌های اجتماعی و تغییر رفتار مخاطبان، رسانه‌های آنلاین نقش مهم‌تری در اطلاع‌رسانی سریع، تحلیل دقیق و ایجاد اعتماد عمومی پیدا کرده‌اند. کاربران امروز فقط به دنبال دریافت سریع خبر نیستند، بلکه انتظار دارند رسانه‌ها بتوانند اطلاعات را ساده، شفاف، قابل بررسی و همراه با تحلیل ارائه دهند. از طرفی افزایش حجم اطلاعات در فضای دیجیتال باعث شده اعتماد به منابع خبری معتبر اهمیت بیشتری پیدا کند. رسانه‌هایی که طراحی حرفه‌ای، دسته‌بندی درست، سرعت مناسب و محتوای قابل فهم داشته باشند، شانس بیشتری برای تبدیل شدن به مرجع خبری کاربران دارند. خبرینو با تمرکز روی تجربه کاربری، انتشار منظم اخبار و نمایش جذاب محتوا تلاش می‌کند همین اعتماد را در میان مخاطبان خود ایجاد کند.">
+  خواندن تحلیل
+  <i class="fa-solid fa-arrow-left"></i>
+</a>
+
+          </div>
+        </article>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="side-analysis-list">
+          <article class="side-analysis-card">
+            <div class="side-analysis-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div>
+              <span>اقتصاد</span>
+              <h3>بررسی روند بازار و تأثیر اخبار اقتصادی بر تصمیم کاربران</h3>
+              <p>تحلیل کوتاه از وضعیت بازار و نقش رسانه‌ها در شکل‌گیری نگاه عمومی.</p>
+            </div>
+          </article>
+
+          <article class="side-analysis-card">
+            <div class="side-analysis-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+
+            <div>
+              <span>تکنولوژی</span>
+              <h3>هوش مصنوعی چگونه آینده تولید خبر را تغییر می‌دهد؟</h3>
+              <p>نگاهی به ابزارهای جدید تولید محتوا، تحلیل داده و انتشار سریع خبر.</p>
+            </div>
+          </article>
+
+          <article class="side-analysis-card">
+            <div class="side-analysis-icon">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+
+            <div>
+              <span>جهان</span>
+              <h3>اهمیت خبرهای بین‌المللی برای مخاطبان رسانه‌های فارسی‌زبان</h3>
+              <p>کاربران امروز به دنبال تحلیل ساده، سریع و قابل فهم از اتفاقات جهان هستند.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="news-modal-overlay" id="newsModalOverlay">
+  <div class="news-modal-box">
+    <button class="news-modal-close" id="newsModalClose" type="button">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="news-modal-image">
+      <img src="" alt="تصویر خبر" id="newsModalImage">
+      <span id="newsModalCategory"></span>
+    </div>
+
+    <div class="news-modal-content">
+      <div class="news-modal-meta">
+        <span>
+          <i class="fa-regular fa-clock"></i>
+          <span id="newsModalDate"></span>
+        </span>
+
+        <span>
+          <i class="fa-solid fa-newspaper"></i>
+          خبرینو
+        </span>
+      </div>
+
+      <h2 id="newsModalTitle"></h2>
+
+      <p id="newsModalText"></p>
+
+      <div class="news-modal-actions">
+        <button class="news-modal-share" id="newsModalShare" type="button">
+          اشتراک‌گذاری
+          <i class="fa-solid fa-share-nodes"></i>
+        </button>
+
+        <button class="news-modal-close-btn" id="newsModalCloseBtn" type="button">
+          بستن پنجره
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="editor-picks-section">
+  <div class="container">
+    <div class="editor-picks-head">
+      <div class="section-title">
+        <span></span>
+        <h2>سردبیر پیشنهاد می‌کند</h2>
+      </div>
+
+      <a href="#" class="editor-all-link">
+        مشاهده همه پیشنهادها
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+
+    <div class="editor-picks-grid">
+      <article class="editor-main-card open-news-modal"
+         data-title="چگونه خبرهای مهم روز را سریع‌تر و دقیق‌تر دنبال کنیم؟"
+         data-category="پیشنهاد سردبیر"
+         data-date="امروز"
+         data-image="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80"
+         data-text="در دنیای امروز که حجم اطلاعات بسیار زیاد شده، کاربران نیاز دارند خبرهای مهم را سریع، دقیق و قابل اعتماد دریافت کنند. استفاده از رسانه‌هایی که دسته‌بندی مشخص، تیترهای شفاف، خلاصه‌های کاربردی و تحلیل‌های کوتاه ارائه می‌دهند، می‌تواند تجربه دنبال کردن اخبار را ساده‌تر کند. خبرینو تلاش می‌کند با ساختار مدرن و نمایش حرفه‌ای محتوا، مسیر دسترسی به اخبار مهم را برای کاربران راحت‌تر کند.">
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80" alt="پیشنهاد سردبیر">
+
+        <div class="editor-main-overlay"></div>
+
+        <div class="editor-main-content">
+          <span>پیشنهاد ویژه</span>
+          <h3>چگونه خبرهای مهم روز را سریع‌تر و دقیق‌تر دنبال کنیم؟</h3>
+          <p>یک راهنمای کوتاه برای داشتن تجربه بهتر در پیگیری خبرهای روز.</p>
+        </div>
+      </article>
+
+      <div class="editor-side-grid">
+        <article class="editor-pick-card open-news-modal"
+           data-title="پنج نشانه یک رسانه خبری قابل اعتماد"
+           data-category="رسانه"
+           data-date="امروز"
+           data-image="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=80"
+           data-text="یک رسانه خبری قابل اعتماد باید اطلاعات را دقیق، شفاف، به‌روز و قابل بررسی منتشر کند. تیترهای روشن، پرهیز از بزرگ‌نمایی، ارائه زمینه کافی برای فهم خبر و توجه به تجربه کاربری از نشانه‌های مهم یک رسانه حرفه‌ای هستند.">
+          <div class="editor-pick-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+
+          <div>
+            <span>رسانه</span>
+            <h3>پنج نشانه یک رسانه خبری قابل اعتماد</h3>
+            <p>چطور بفهمیم یک رسانه برای دنبال کردن اخبار مناسب است؟</p>
+          </div>
+        </article>
+
+        <article class="editor-pick-card open-news-modal"
+           data-title="نقش موبایل در تغییر عادت خبرخوانی کاربران"
+           data-category="فناوری"
+           data-date="امروز"
+           data-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+           data-text="با افزایش استفاده از موبایل، کاربران انتظار دارند خبرها را سریع، خلاصه و با طراحی مناسب صفحه کوچک دریافت کنند. رسانه‌هایی که تجربه موبایلی بهتری ارائه می‌دهند، شانس بیشتری برای جذب و حفظ مخاطب دارند.">
+          <div class="editor-pick-icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+
+          <div>
+            <span>فناوری</span>
+            <h3>نقش موبایل در تغییر عادت خبرخوانی کاربران</h3>
+            <p>موبایل حالا اصلی‌ترین ابزار دنبال کردن اخبار روز شده است.</p>
+          </div>
+        </article>
+
+        <article class="editor-pick-card open-news-modal"
+           data-title="چرا تحلیل کوتاه برای کاربران امروز جذاب‌تر است؟"
+           data-category="تحلیل"
+           data-date="امروز"
+           data-image="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=80"
+           data-text="کاربران امروز زمان محدودی برای مطالعه دارند و معمولاً به دنبال محتوایی هستند که در مدت کوتاه، تصویر روشنی از موضوع ارائه دهد. تحلیل‌های کوتاه و کاربردی می‌توانند به مخاطب کمک کنند سریع‌تر تصمیم بگیرد و بهتر موضوع را بفهمد.">
+          <div class="editor-pick-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+
+          <div>
+            <span>تحلیل</span>
+            <h3>چرا تحلیل کوتاه برای کاربران امروز جذاب‌تر است؟</h3>
+            <p>تحلیل کوتاه، ساده و کاربردی می‌تواند اثرگذاری بیشتری داشته باشد.</p>
+          </div>
+        </article>
+
+        <article class="editor-pick-card open-news-modal"
+           data-title="آینده سایت‌های خبری با طراحی مدرن چگونه خواهد بود؟"
+           data-category="دیجیتال"
+           data-date="امروز"
+           data-image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+           data-text="سایت‌های خبری آینده باید سریع، ریسپانسیو، قابل اعتماد و کاربرپسند باشند. طراحی مدرن، دسته‌بندی دقیق محتوا، دارک مود، جستجوی پیشرفته و نمایش هوشمند اخبار می‌تواند تجربه کاربر را به شکل چشمگیری بهتر کند.">
+          <div class="editor-pick-icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+
+          <div>
+            <span>دیجیتال</span>
+            <h3>آینده سایت‌های خبری با طراحی مدرن چگونه خواهد بود؟</h3>
+            <p>طراحی حرفه‌ای نقش زیادی در ماندگاری کاربران دارد.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="photo-report-section">
+  <div class="container">
+    <div class="photo-report-head">
+      <div class="section-title">
+        <span></span>
+        <h2>گزارش تصویری</h2>
+      </div>
+
+      <a href="#h2-1" class="photo-report-link">
+        مشاهده گالری
+        <i class="fa-solid fa-images"></i>
+      </a>
+    </div>
+
+    <div class="photo-report-grid">
+      <article class="photo-report-main open-news-modal"
+         data-title="روایتی تصویری از شلوغ‌ترین لحظه‌های خبری امروز"
+         data-category="گزارش تصویری"
+         data-date="امروز"
+         data-image="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=80"
+         data-text="گزارش تصویری امروز خبرینو نگاهی دارد به لحظه‌هایی که بیشترین توجه کاربران و رسانه‌ها را به خود جلب کرده‌اند. تصاویر خبری می‌توانند روایت متفاوتی از اتفاقات ارائه دهند و گاهی یک تصویر، بهتر از چندین خط متن، حال‌وهوای یک رویداد را منتقل می‌کند.">
+        <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=80" alt="گزارش تصویری">
+
+        <div class="photo-main-overlay"></div>
+
+        <div class="photo-main-content">
+          <span>
+            <i class="fa-solid fa-camera"></i>
+            گزارش ویژه
+          </span>
+
+          <h3>روایتی تصویری از شلوغ‌ترین لحظه‌های خبری امروز</h3>
+
+          <p>تصاویر منتخب از اتفاقات مهم روز در قاب خبرینو.</p>
+        </div>
+      </article>
+
+      <div class="photo-report-side">
+        <article class="photo-card open-news-modal"
+           data-title="نمایی از فعالیت خبرنگاران در یک روز پرخبر"
+           data-category="رسانه"
+           data-date="امروز"
+           data-image="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=80"
+           data-text="فعالیت خبرنگاران در روزهای پرخبر نقش مهمی در انتقال سریع و دقیق اطلاعات دارد. این گزارش تصویری بخشی از فضای کاری رسانه‌ها، تحریریه‌ها و لحظه‌های انتشار خبر را نمایش می‌دهد.">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=80" alt="رسانه">
+
+          <div class="photo-card-content">
+            <span>رسانه</span>
+            <h3>نمایی از فعالیت خبرنگاران در یک روز پرخبر</h3>
+          </div>
+        </article>
+
+        <article class="photo-card open-news-modal"
+           data-title="تصاویر منتخب از رویدادهای شهری امروز"
+           data-category="اجتماعی"
+           data-date="امروز"
+           data-image="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+           data-text="رویدادهای شهری همیشه بخشی مهم از اخبار روز هستند. در این گزارش، چند تصویر منتخب از فضای شهر، مردم و لحظه‌های اجتماعی امروز را مرور می‌کنیم.">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="اجتماعی">
+
+          <div class="photo-card-content">
+            <span>اجتماعی</span>
+            <h3>تصاویر منتخب از رویدادهای شهری امروز</h3>
+          </div>
+        </article>
+
+        <article class="photo-card open-news-modal"
+           data-title="قاب‌هایی از تکنولوژی، نوآوری و زندگی دیجیتال"
+           data-category="فناوری"
+           data-date="امروز"
+           data-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+           data-text="فناوری امروز فقط در دستگاه‌ها خلاصه نمی‌شود؛ بلکه سبک زندگی، ارتباطات، کار و حتی رسانه‌ها را تغییر داده است. این گزارش تصویری نگاهی دارد به جلوه‌هایی از زندگی دیجیتال.">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="فناوری">
+
+          <div class="photo-card-content">
+            <span>فناوری</span>
+            <h3>قاب‌هایی از تکنولوژی، نوآوری و زندگی دیجیتال</h3>
+          </div>
+        </article>
+
+        <article class="photo-card open-news-modal"
+           data-title="لحظه‌های دیدنی از فضای ورزشی هفته"
+           data-category="ورزش"
+           data-date="امروز"
+           data-image="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80"
+           data-text="ورزش همیشه پر از لحظه‌های هیجان‌انگیز و تماشایی است. در این گزارش تصویری، چند قاب منتخب از اتفاقات ورزشی هفته را مرور می‌کنیم.">
+          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80" alt="ورزش">
+
+          <div class="photo-card-content">
+            <span>ورزش</span>
+            <h3>لحظه‌های دیدنی از فضای ورزشی هفته</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video-news-section">
+  <div class="container">
+    <div class="video-news-head">
+      <div class="section-title"><span></span><h2>ویدیوهای خبری</h2></div>
+      <a href="#" class="video-news-link">مشاهده همه ویدیوها <i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    <div class="video-news-grid">
+      <article class="video-main-card open-news-modal" data-title="گزارش ویدیویی از تحولات فناوری" data-category="تکنولوژی" data-video="https://www.w3schools.com/html/mov_bbb.mp4" data-is-video="true" data-text="گزارش تحولات جدید فناوری در شرکت‌های بزرگ.">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80">
+        <div class="video-main-overlay"></div>
+        <div class="video-play-btn"><i class="fa-solid fa-play"></i></div>
+        <div class="video-main-content">
+          <span><i class="fa-solid fa-video"></i> گزارش ویدیویی</span>
+          <h3>گزارش ویدیویی از تازه‌ترین تحولات دنیای فناوری</h3>
+        </div>
+      </article>
+      <div class="video-side-list">
+        <article class="video-small-card open-news-modal" data-title="مرور اخبار اقتصادی" data-category="اقتصاد" data-video="https://vjs.zencdn.net/v/oceans.mp4" data-is-video="true" data-text="تحلیل کوتاه از بازار مالی امروز.">
+          <div class="video-small-image">
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <div class="video-small-content">
+            <span>اقتصاد</span>
+            <h3>مرور کوتاه خبرهای اقتصادی امروز</h3>
+          </div>
+        </article>
+        <article class="video-small-card open-news-modal" data-title="حواشی ورزشی هفته" data-category="ورزش" data-video="https://www.w3schools.com/html/movie.mp4" data-is-video="true" data-text="اتفاقات مهم دنیای ورزش.">
+          <div class="video-small-image">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <div class="video-small-content">
+            <span>ورزش</span>
+            <h3>حاشیه‌های مهم هفته در دنیای ورزش</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="latest-news-section" id="latestNews">
+  <div class="container">
+    <div class="latest-news-head">
+      <div class="section-title">
+        <span></span>
+        <h2>آخرین اخبار</h2>
+      </div>
+
+      <div class="latest-filter-buttons">
+        <button class="latest-filter active" data-filter="all" type="button">همه</button>
+        <button class="latest-filter" data-filter="politics" type="button">سیاسی</button>
+        <button class="latest-filter" data-filter="economy" type="button">اقتصادی</button>
+        <button class="latest-filter" data-filter="sport" type="button">ورزشی</button>
+        <button class="latest-filter" data-filter="tech" type="button">فناوری</button>
+        <button class="latest-filter" data-filter="society" type="button">اجتماعی</button>
+      </div>
+    </div>
+
+    <div class="latest-news-layout">
+      <div class="latest-news-grid" id="latestNewsGrid">
+        <article class="latest-news-card" data-category="tech">
+          <div class="latest-news-image">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="فناوری">
+            <span>فناوری</span>
+          </div>
+
+          <div class="latest-news-content">
+            <div class="latest-news-meta">
+              <span>
+                <i class="fa-regular fa-clock"></i>
+                ۱۰ دقیقه قبل
+              </span>
+              <span>
+                <i class="fa-regular fa-eye"></i>
+                ۲.۴K
+              </span>
+            </div>
+
+            <h3>ابزارهای هوشمند مسیر تازه‌ای برای تولید محتوای خبری ایجاد کردند</h3>
+
+            <p>
+              استفاده از فناوری‌های جدید باعث شده رسانه‌ها سریع‌تر، دقیق‌تر و هدفمندتر محتوا تولید کنند.
+            </p>
+
+            <a href="#" class="latest-read-btn open-news-modal"
+               data-title="ابزارهای هوشمند مسیر تازه‌ای برای تولید محتوای خبری ایجاد کردند"
+               data-category="فناوری"
+               data-date="۱۰ دقیقه قبل"
+               data-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+               data-text="ابزارهای هوشمند در سال‌های اخیر نقش مهمی در تولید، تحلیل و انتشار محتوای خبری پیدا کرده‌اند. رسانه‌های آنلاین با کمک این فناوری‌ها می‌توانند روند بررسی داده‌ها، دسته‌بندی اخبار و انتشار محتوا را سریع‌تر انجام دهند. این تغییرات باعث می‌شود کاربران خبرها را با سرعت بیشتر و ساختاری دقیق‌تر دریافت کنند.">
+              مطالعه خبر
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="latest-news-card" data-category="economy">
+          <div class="latest-news-image">
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="اقتصاد">
+            <span>اقتصادی</span>
+          </div>
+
+          <div class="latest-news-content">
+            <div class="latest-news-meta">
+              <span>
+                <i class="fa-regular fa-clock"></i>
+                ۲۵ دقیقه قبل
+              </span>
+              <span>
+                <i class="fa-regular fa-eye"></i>
+                ۳.۱K
+              </span>
+            </div>
+
+            <h3>بازارهای مالی امروز با نوسان آرام و تغییرات محدود همراه شدند</h3>
+
+            <p>
+              گزارش‌ها نشان می‌دهد فعالان بازار با دقت بیشتری اخبار اقتصادی روز را دنبال می‌کنند.
+            </p>
+
+            <a href="#" class="latest-read-btn open-news-modal"
+               data-title="بازارهای مالی امروز با نوسان آرام و تغییرات محدود همراه شدند"
+               data-category="اقتصادی"
+               data-date="۲۵ دقیقه قبل"
+               data-image="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+               data-text="بازارهای مالی امروز با روندی نسبتاً آرام دنبال شدند و تغییرات محدود در برخی شاخص‌ها دیده شد. کارشناسان معتقدند تصمیم‌گیری فعالان اقتصادی در چنین شرایطی بیشتر به تحلیل اخبار، داده‌های رسمی و چشم‌انداز کوتاه‌مدت بازار بستگی دارد. رسانه‌ها نیز نقش مهمی در ساده‌سازی و انتقال درست این اطلاعات به کاربران دارند.">
+              مطالعه خبر
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="latest-news-card" data-category="sport">
+          <div class="latest-news-image">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80" alt="ورزش">
+            <span>ورزشی</span>
+          </div>
+
+          <div class="latest-news-content">
+            <div class="latest-news-meta">
+              <span>
+                <i class="fa-regular fa-clock"></i>
+                ۴۰ دقیقه قبل
+              </span>
+              <span>
+                <i class="fa-regular fa-eye"></i>
+                ۱.۸K
+              </span>
+            </div>
+
+            <h3>برنامه مسابقات هفته آینده با چند دیدار حساس اعلام شد</h3>
+
+            <p>
+              علاقه‌مندان ورزش در هفته آینده شاهد رقابت‌های مهم و پرهیجانی خواهند بود.
+            </p>
+
+            <a href="#" class="latest-read-btn open-news-modal"
+               data-title="برنامه مسابقات هفته آینده با چند دیدار حساس اعلام شد"
+               data-category="ورزشی"
+               data-date="۴۰ دقیقه قبل"
+               data-image="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80"
+               data-text="برنامه مسابقات هفته آینده اعلام شد و چند دیدار حساس در میان رقابت‌ها دیده می‌شود. تیم‌ها در این مرحله برای کسب جایگاه بهتر تلاش می‌کنند و هواداران نیز انتظار مسابقاتی جذاب و پرهیجان دارند. تحلیل‌گران ورزشی معتقدند نتایج این هفته می‌تواند در روند ادامه رقابت‌ها تأثیر قابل توجهی داشته باشد.">
+              مطالعه خبر
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="latest-news-card" data-category="society">
+          <div class="latest-news-image">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="اجتماعی">
+            <span>اجتماعی</span>
+          </div>
+
+          <div class="latest-news-content">
+            <div class="latest-news-meta">
+              <span>
+                <i class="fa-regular fa-clock"></i>
+                ۱ ساعت قبل
+              </span>
+              <span>
+                <i class="fa-regular fa-eye"></i>
+                ۲.۹K
+              </span>
+            </div>
+
+            <h3>گزارش تازه‌ای از تغییر سبک زندگی شهری منتشر شد</h3>
+
+            <p>
+              زندگی شهری در سال‌های اخیر با تغییرات مهمی در رفتار، خرید و ارتباطات روزمره همراه شده است.
+            </p>
+
+            <a href="#" class="latest-read-btn open-news-modal"
+               data-title="گزارش تازه‌ای از تغییر سبک زندگی شهری منتشر شد"
+               data-category="اجتماعی"
+               data-date="۱ ساعت قبل"
+               data-image="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+               data-text="گزارش تازه‌ای درباره تغییر سبک زندگی شهری نشان می‌دهد که کاربران امروز بیشتر از گذشته به خدمات آنلاین، رسانه‌های دیجیتال و ارتباطات سریع وابسته شده‌اند. این تغییرات روی شیوه خرید، مصرف خبر، تعاملات اجتماعی و حتی برنامه‌ریزی روزمره افراد تأثیر گذاشته است.">
+              مطالعه خبر
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="latest-news-card" data-category="politics">
+          <div class="latest-news-image">
+            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=900&q=80" alt="سیاسی">
+            <span>سیاسی</span>
+          </div>
+
+          <div class="latest-news-content">
+            <div class="latest-news-meta">
+              <span>
+                <i class="fa-regular fa-clock"></i>
+                ۱ ساعت قبل
+              </span>
+              <span>
+                <i class="fa-regular fa-eye"></i>
+                ۱.۵K
+              </span>
+            </div>
+
+            <h3>نشست خبری امروز با محوریت بررسی مسائل عمومی برگزار شد</h3>
+
+            <p>
+              در این نشست، موضوعات عمومی و روند اطلاع‌رسانی رسانه‌ها مورد توجه قرار گرفت.
+            </p>
+
+            <a href="#" class="latest-read-btn open-news-modal"
+               data-title="نشست خبری امروز با محوریت بررسی مسائل عمومی برگزار شد"
+               data-category="سیاسی"
+               data-date="۱ ساعت قبل"
+               data-image="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=900&q=80"
+               data-text="نشست خبری امروز با محوریت بررسی مسائل عمومی برگزار شد. در این نشست، سخنرانان درباره اهمیت شفافیت اطلاع‌رسانی، نقش رسانه‌ها در انتقال دقیق خبر و ضرورت پاسخ‌گویی به نیازهای خبری جامعه صحبت کردند.">
+              مطالعه خبر
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="latest-news-card" data-category="tech">
+          <div class="latest-news-image">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="دیجیتال">
+            <span>دیجیتال</span>
+          </div>
+
+          <div class="latest-news-content">
+            <div class="latest-news-meta">
+              <span>
+                <i class="fa-regular fa-clock"></i>
+                ۲ ساعت قبل
+              </span>
+              <span>
+                <i class="fa-regular fa-eye"></i>
+                ۲.۲K
+              </span>
+            </div>
+
+            <h3>سایت‌های خبری مدرن روی تجربه کاربری سریع‌تر تمرکز می‌کنند</h3>
+
+            <p>
+              سرعت، طراحی ریسپانسیو و جستجوی دقیق به معیارهای مهم رسانه‌های آنلاین تبدیل شده‌اند.
+            </p>
+
+            <a href="#" class="latest-read-btn open-news-modal"
+               data-title="سایت‌های خبری مدرن روی تجربه کاربری سریع‌تر تمرکز می‌کنند"
+               data-category="دیجیتال"
+               data-date="۲ ساعت قبل"
+               data-image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+               data-text="سایت‌های خبری مدرن بیش از گذشته روی تجربه کاربری سریع و روان تمرکز می‌کنند. کاربران انتظار دارند صفحات سریع باز شوند، دسته‌بندی‌ها واضح باشند، جستجو دقیق کار کند و محتوا در موبایل و دسکتاپ بدون مشکل نمایش داده شود. چنین ویژگی‌هایی باعث ماندگاری بیشتر کاربر و افزایش اعتماد به رسانه می‌شود.">
+              مطالعه خبر
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <aside class="latest-sidebar">
+        <div class="latest-sidebar-card">
+          <div class="sidebar-title">
+            <i class="fa-solid fa-fire"></i>
+            پربازدیدهای امروز
+          </div>
+
+          <div class="popular-news-list">
+            <a href="#" class="popular-news-item open-news-modal"
+               data-title="رشد مصرف خبر در موبایل بین کاربران جوان"
+               data-category="پربازدید"
+               data-date="امروز"
+               data-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+               data-text="مصرف خبر در موبایل میان کاربران جوان رشد قابل توجهی داشته است. طراحی ریسپانسیو، سرعت بالا و نمایش خلاصه‌های کاربردی از مهم‌ترین عوامل جذب این گروه از مخاطبان است.">
+              <strong>01</strong>
+              <span>رشد مصرف خبر در موبایل بین کاربران جوان</span>
+            </a>
+
+            <a href="#" class="popular-news-item open-news-modal"
+               data-title="تحلیل کوتاه از تغییر رفتار کاربران در فضا آنلاین"
+               data-category="پربازدید"
+               data-date="امروز"
+               data-image="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=80"
+               data-text="رفتار کاربران در فضای آنلاین تغییر کرده و حالا بیشتر به دنبال محتوای سریع، قابل اعتماد و قابل فهم هستند. رسانه‌هایی که این نیاز را بهتر پاسخ دهند، موفق‌تر خواهند بود.">
+              <strong>02</strong>
+              <span>تحلیل کوتاه از تغییر رفتار کاربران در فضای آنلاین</span>
+            </a>
+
+            <a href="#" class="popular-news-item open-news-modal"
+               data-title="چرا طراحی سایت خبری روی اعتماد کاربران اثر دارد؟"
+               data-category="پربازدید"
+               data-date="امروز"
+               data-image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+               data-text="طراحی سایت خبری فقط یک موضوع ظاهری نیست. چیدمان منظم، خوانایی بالا، سرعت مناسب و دسترسی راحت به اخبار باعث افزایش اعتماد کاربران می‌شود.">
+              <strong>03</strong>
+              <span>چرا طراحی سایت خبری روی اعتماد کاربران اثر دارد؟</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="latest-sidebar-card newsletter-mini-card">
+          <div class="sidebar-title">
+            <i class="fa-solid fa-envelope"></i>
+            خبرنامه خبرینو
+          </div>
+
+          <p>برای دریافت خلاصه مهم‌ترین خبرهای روز، ایمیل خود را وارد کنید.</p>
+
+          <form class="mini-newsletter-form" id="miniNewsletterForm">
+            <input type="email" id="miniNewsletterEmail" placeholder="ایمیل شما">
+            <button type="submit">
+              عضویت
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <div class="mini-newsletter-alert" id="miniNewsletterAlert"></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="latest-load-more-wrap">
+      <button class="latest-load-more" id="latestLoadMore" type="button">
+        بارگذاری اخبار بیشتر
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="why-us-section">
+  <div class="container">
+    <div class="why-us-wrapper">
+      
+      <div class="why-us-content">
+        <div class="section-title">
+          <span></span>
+          <h2>چرا خبرینو؟</h2>
+        </div>
+
+        <h3>رسانه‌ای سریع، مدرن و قابل اعتماد برای دنبال کردن خبرهای روز</h3>
+
+        <p>
+          خبرینو با طراحی حرفه‌ای، دسته‌بندی دقیق اخبار، تجربه کاربری سریع و ظاهر مدرن،
+          بستری مناسب برای نمایش خبرها، تحلیل‌ها، گزارش‌های تصویری و محتوای ویدیویی فراهم می‌کند.
+          این قالب کاملاً ریسپانسیو طراحی شده و برای ارائه، فروش یا توسعه بیشتر آماده است.
+        </p>
+
+        <div class="why-us-stats">
+          <div class="why-stat-box">
+            <strong>24/7</strong>
+            <span>پوشش خبری</span>
+          </div>
+
+          <div class="why-stat-box">
+            <strong>100%</strong>
+            <span>ریسپانسیو</span>
+          </div>
+
+          <div class="why-stat-box">
+            <strong>+12</strong>
+            <span>بخش حرفه‌ای</span>
+          </div>
+        </div>
+
+        <a href="contact.html" class="why-us-btn">
+          ارتباط با ما
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+      </div>
+
+      <div class="why-us-cards">
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+
+          <h4>سرعت بالا</h4>
+          <p>
+            ساختار سبک و بهینه باعث می‌شود صفحات با سرعت مناسب بارگذاری شوند و کاربر تجربه روانی داشته باشد.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+
+          <h4>طراحی ریسپانسیو</h4>
+          <p>
+            تمام بخش‌های سایت برای موبایل، تبلت و دسکتاپ بهینه شده‌اند و بدون اسکرول افقی نمایش داده می‌شوند.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+
+          <h4>دارک مود حرفه‌ای</h4>
+          <p>
+            حالت تاریک با ذخیره‌سازی در مرورگر فعال می‌شود و تجربه کاربری مدرن‌تری به سایت می‌دهد.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+
+          <h4>مناسب برای فروش</h4>
+          <p>
+            ظاهر کامل، صفحات اختصاصی، فرم تماس و بخش تبلیغات باعث می‌شود پروژه آماده ارائه به مشتری باشد.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-wrapper">
+
+      <div class="faq-content">
+        <div class="section-title">
+          <span></span>
+          <h2>سوالات پرتکرار</h2>
+        </div>
+
+        <h3>پاسخ سریع به سوالات رایج کاربران خبرینو</h3>
+
+        <p>
+          در این بخش به رایج‌ترین سوالات کاربران درباره نحوه استفاده از سایت، ارسال درخواست تبلیغات،
+          تماس با تیم خبرینو و امکانات قالب پاسخ داده‌ایم.
+        </p>
+
+        <div class="faq-support-box">
+          <div class="faq-support-icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+
+          <div>
+            <strong>هنوز سوالی داری؟</strong>
+            <span>از طریق صفحه تماس با ما پیام بفرست.</span>
+          </div>
+        </div>
+
+        <a href="contact.html" class="faq-contact-btn">
+          رفتن به تماس با ما
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+      </div>
+
+      <div class="faq-accordion" id="faqAccordion">
+
+        <div class="faq-item active">
+          <button class="faq-question" type="button">
+            <span>خبرینو چه نوع سایت خبری‌ای است؟</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              خبرینو یک قالب خبری مدرن و ریسپانسیو است که برای نمایش خبرهای روز، تحلیل‌ها،
+              گزارش‌های تصویری، ویدیوهای خبری و اخبار دسته‌بندی‌شده طراحی شده است.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>آیا سایت در موبایل درست نمایش داده می‌شود؟</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              بله، تمام بخش‌های سایت از جمله اسلایدر، کارت‌های خبری، صفحه تبلیغات، تماس با ما،
+              آخرین اخبار و سوالات پرتکرار برای موبایل، تبلت و دسکتاپ کاملاً بهینه شده‌اند.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>آیا خبرینو دارک مود دارد؟</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              بله، قالب خبرینو دارای دارک مود حرفه‌ای است و وضعیت انتخاب‌شده کاربر در
+              <code>localStorage</code>
+              ذخیره می‌شود تا در مراجعه بعدی هم همان حالت نمایش داده شود.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>درخواست تبلیغات چطور ارسال می‌شود؟</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              کاربر از طریق صفحه تبلیغات فرم درخواست را تکمیل می‌کند و اطلاعات واردشده به صورت
+              یک پیام آماده داخل تلگرام برای مدیر سایت با آیدی
+              <strong>@PRO_MAX1253</strong>
+              باز می‌شود.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>آیا خبرها داخل صفحه جدا باز می‌شوند؟</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              در نسخه فعلی، دکمه‌های مطالعه خبر به یک پنجره پاپ‌آپ حرفه‌ای متصل هستند.
+              اطلاعات خبر از طریق
+              <code>data-attribute</code>
+              دریافت می‌شود و داخل Modal نمایش داده می‌شود.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="butto">
+            <span>آیا این قالب برای فروش مناسب است؟</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              بله، چون دارای صفحه اصلی کامل، صفحه تبلیغات، صفحه تماس، دارک مود، فرم‌های کاربردی،
+              طراحی ریسپانسیو، بخش ویدیو، گزارش تصویری، آخرین اخبار و سایدبار پربازدیدها است.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-wrapper">
+
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <span>خ</span>
+          خبرینو
+        </a>
+
+        <p>
+          خبرینو یک رسانه خبری مدرن برای نمایش سریع، دقیق و جذاب اخبار روز،
+          تحلیل‌ها، گزارش‌های تصویری و محتوای ویدیویی است.
+        </p>
+
+        <div class="footer-socials">
+          <a href="#" aria-label="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a href="#" aria-label="Youtube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>دسترسی سریع</h3>
+
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-angle-left"></i>
+              صفحه اصلی
+            </a>
+          </li>
+
+          <li>
+            <a href="#latestNews">
+              <i class="fa-solid fa-angle-left"></i>
+              آخرین اخبار
+            </a>
+          </li>
+
+          <li>
+            <a href="ads.html">
+              <i class="fa-solid fa-angle-left"></i>
+              تبلیغات
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html">
+              <i class="fa-solid fa-angle-left"></i>
+              تماس با ما
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>دسته‌بندی‌ها</h3>
+
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-angle-left"></i>
+              سیاسی
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-angle-left"></i>
+              اقتصادی
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-angle-left"></i>
+              ورزشی
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-angle-left"></i>
+              فناوری
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>ارتباط با خبرینو</h3>
+
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>ایران، کردستان دفتر مرکزی خبرینو</span>
+        </div>
+
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>rebinnabati1253@gmail.com</span>
+        </div>
+
+        <div class="footer-contact-item">
+          <i class="fa-brands fa-telegram"></i>
+          <span>@PRO_MAX1253</span>
+        </div>
+
+        <a href="contact.html" class="footer-contact-btn">
+          ارسال پیام
+          <i class="fa-solid fa-paper-plane"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+     <p>طراحی و توسعه توسط <a href="https://rebindev.ir" target="_blank" rel="noopener">RebinDev</a></p>
+
+      <button class="back-to-top" id="backToTop" type="button" aria-label="بازگشت به بالا">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<div class="modal fade" id="newsModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newsModalTitle"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div id="modalMediaContainer"></div>
+        <p id="newsModalText" class="mt-3"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
